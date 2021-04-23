@@ -1,21 +1,46 @@
 body{
-background: #F9D9FF;
+background:  #F9D9FF url('imagens/Fundo/fundo.png');
+background-size: 10px;
+background-position: 15px 100px ;
 }
 #principal{
+    margin: 12px;
     width: 98%;
-    text-align: center;
+    font: 18px "Times New Roman", Times, serif;
+    background-color: lawngreen;
 }
 #head{
-
+    
+    padding-top: 10px;
+    font-size: 2em ;
+    font: bold;
+    background: url('imagens/Fundo/fundo1head.jpg');
 }
 #menu{
+    text-align: center;
     padding: 8px;
 }
 #conteudo{
+    padding-top: 10px;
+    padding-left: 20px;
 
 }
 .negrito{
     font:bold; 
+}
+
+.flou{
+    float: left;
+    margin-left: 150px;
+}
+.clear{
+    clear: both;
+}
+.centralizar{
+    text-align: center;
+}
+.imagens{
+    width: 200px;
 }
 a{
     padding: 10px;
