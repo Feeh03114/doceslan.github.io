@@ -30,6 +30,8 @@ background-position: 15px 100px ;
     padding-top: 10px;
     padding-left: 20px;
     margin-bottom: 10px;
+    box-shadow: 10px, 5px 5px black;
+    border-radius: 5px;
 
 }
 #fotos{
@@ -58,10 +60,17 @@ background-position: 15px 100px ;
 .imagens{
     height: 250px;
     border:2px solid #55F2FA ;
+    box-shadow: 10px, 5px 5px black;
+    border-radius: 5px;
 }
 .imagens2{
     width: 200px;
     border:2px solid #55F2FA ;
+    box-shadow: 10px, 5px 5px black;
+    border-radius: 5px;
+}
+.center{
+    vertical-align: middle; 
 }
 a{
     padding: 10px;
