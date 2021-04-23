@@ -7,7 +7,7 @@ background-position: 15px 100px ;
     margin: 12px;
     width: 98%;
     font: 18px "Times New Roman", Times, serif;
-    background-color: lawngreen;
+    background: url('imagens/Fundo/fundo2.png');
 }
 #head{
     
@@ -17,6 +17,7 @@ background-position: 15px 100px ;
     background: url('imagens/Fundo/fundo1head.jpg');
 }
 #menu{
+    background: url('imagens/Fundo/fundomenu.jpg');
     text-align: center;
     padding: 8px;
 }
@@ -24,6 +25,9 @@ background-position: 15px 100px ;
     padding-top: 10px;
     padding-left: 20px;
 
+}
+#fotos{
+    text-align: center;
 }
 .negrito{
     font:bold; 
@@ -40,7 +44,12 @@ background-position: 15px 100px ;
     text-align: center;
 }
 .imagens{
+    height: 250px;
+    border:2px solid #55F2FA ;
+}
+.imagens2{
     width: 200px;
+    border:2px solid #55F2FA ;
 }
 a{
     padding: 10px;
