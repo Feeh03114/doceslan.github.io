@@ -28,10 +28,11 @@ background-position: 15px 100px ;
 }
 #conteudo{
     padding-top: 10px;
+    padding-bottom: 10px;
     padding-left: 20px;
     margin-bottom: 10px;
-    box-shadow: 10px, 5px 5px black;
-    border-radius: 5px;
+    box-shadow: 10px 5px 5px #8C8070;
+    border-radius: 10px;
 
 }
 #fotos{
@@ -65,13 +66,15 @@ background-position: 15px 100px ;
     height: 250px;
     border:2px solid #55F2FA ;
     box-shadow: 10px 5px 5px #8C8070;
-    border-radius: 20px;
+    border-radius: 10px;
+
 }
 .imagens2{
     width: 200px;
     border:2px solid #55F2FA ;
     box-shadow: 10px 5px 5px #8C8070;
-    border-radius: 20px;
+    border-radius: 10px;
+    
 }
 
 a{
