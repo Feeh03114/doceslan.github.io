@@ -4,17 +4,22 @@ background-size: 10px;
 background-position: 15px 100px ;
 }
 #principal{
-    margin: 12px;
+    margin: 12px auto;
     width: 98%;
     font: 18px "Times New Roman", Times, serif;
     background: url('imagens/Fundo/fundo2.png');
 }
 #head{
-    
+    text-align: center;
     padding-top: 10px;
-    font-size: 2em ;
-    font: bold;
     background: url('imagens/Fundo/fundo1head.jpg');
+}
+
+#title{
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    font: 5em bold;
 }
 #menu{
     background: url('imagens/Fundo/fundomenu.jpg');
@@ -29,19 +34,25 @@ background-position: 15px 100px ;
 #fotos{
     text-align: center;
 }
+#rodape{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: center;
+    background: url('imagens/Fundo/fundomenu.jpg') ;
+    
+}
 .negrito{
     font:bold; 
 }
 
 .flou{
     float: left;
-    margin-left: 150px;
+    text-align: center;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 .clear{
     clear: both;
-}
-.centralizar{
-    text-align: center;
 }
 .imagens{
     height: 250px;
@@ -54,5 +65,5 @@ background-position: 15px 100px ;
 a{
     padding: 10px;
     text-decoration: none;
-    color: #BF6DFF;
+    color: #823DB8;
 }
