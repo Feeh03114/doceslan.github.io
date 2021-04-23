@@ -8,6 +8,8 @@ background-position: 15px 100px ;
     width: 98%;
     font: 18px "Times New Roman", Times, serif;
     background: url('imagens/Fundo/fundo2.png');
+    box-shadow: 10px 5px 5px #8C8070;
+    border-radius: 10px;
 }
 #head{
     text-align: center;
@@ -30,9 +32,7 @@ background-position: 15px 100px ;
     padding-top: 10px;
     padding-bottom: 20px;
     padding-left: 20px;
-    margin-bottom: 10px;
-    box-shadow: 10px 5px 5px #8C8070;
-    border-radius: 10px;
+    
 
 }
 #fotos{
