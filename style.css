@@ -24,9 +24,9 @@ background-position: 15px 100px ;
     font: 5em bold;
 }
 #menu{
-    background: url('imagens/Fundo/fundomenu.jpg');
     text-align: center;
     padding: 8px;
+    background: url('imagens/Fundo/fundo1head.jpg');
 }
 #conteudo{
     padding-top: 10px;
