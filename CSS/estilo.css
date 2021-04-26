@@ -26,9 +26,6 @@ body{
     margin: 0px auto;
     padding: 15px;
 }
-#area-conteudo,#area-lateral{
-    background: orange;
-}
 #area-conteudo{
     width: 680px;
     float: left;
