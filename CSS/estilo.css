@@ -106,3 +106,6 @@ h2{
 .clear{
     clear: both;
 }
+#whats, #insta {
+    padding: 10px;
+}
