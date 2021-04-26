@@ -42,6 +42,11 @@ body{
     background: white;
 }
 
+#contato{
+    text-align: center;
+}
+
+
 #rodape{
     clear: both;
     text-align: center;
