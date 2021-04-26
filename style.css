@@ -1,5 +1,5 @@
 body{
-background:  #F9D9FF url('imagens/Fundo/fundo.png');
+background:  #F9D9FF ;
 background-size: 10px;
 background-position: 15px 100px ;
 }
@@ -7,14 +7,14 @@ background-position: 15px 100px ;
     margin: 12px auto;
     width: 98%;
     font: 18px "Times New Roman", Times, serif;
-    background: url('imagens/Fundo/fundo2.png');
+    background: #F2CEDF;
     box-shadow: 10px 5px 5px #8C8070;
     border-radius: 10px;
 }
 #head{
     text-align: center;
     padding-top: 10px;
-    background: url('imagens/Fundo/fundo1head.jpg');
+    background: #F29BC4;
 }
 
 #title{
@@ -26,7 +26,7 @@ background-position: 15px 100px ;
 #menu{
     text-align: center;
     padding: 8px;
-    background: url('imagens/Fundo/fundo1head.jpg');
+    background: #F29BC4;
 }
 #conteudo{
     padding-top: 10px;
