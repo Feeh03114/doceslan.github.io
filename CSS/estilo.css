@@ -63,8 +63,9 @@ body{
 
 }
 #Total{
+    text-align: center;
     float: right;
-    width: 110px;
+    width: 120px;
 
 }
 #carinho{
