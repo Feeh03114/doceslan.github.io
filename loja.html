@@ -1,44 +1,118 @@
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Doceslan - Loja</title>
+        <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+        <script type="text/javascript" src="sistema.js"></script>
+    </head>
+    <body>
 
-<html>
-
-<head>
-    <title>Doceslan - Contato</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
-</head>
-
-<body>
-    <div id="area-cabecalho">
-        <!--- cabeçalho e menu-->
-
-        <div id="area-logo">
-            <h1>DOCESLAN</h1>
+        <div id="area-cabecalho">
+            <!--- cabeçalho e menu-->
+    
+            <div id="area-logo">
+                <h1>DOCESLAN</h1>
+            </div>
+    
+            <div id="area-menu">
+                <a href="index.html"><strong>Home</strong></a>
+                <a href="loja.html"><strong>Loja</strong></a>
+                <a href="contato.html"><strong>Contato</strong></a>
+            </div>
+    
         </div>
-
-        <div id="area-menu">
-            <a href="index.html"><strong>Home</strong></a>
-            <a href="loja.html"><strong>Loja</strong></a>
-            <a href="contato.html"><strong>Contato</strong></a>
-        </div>
-
-    </div>
-
-    <div id="area-principal">
-            <div id="area-conteudo">
-                <div >
-                    <h2>Contatos</h2><br>
-                    <div id="contato" >
-                        <div id="whats">
-                            <img src="imagens/Logo/whatsapp.png" width="30px"><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5515998490850" target="_blank">(15)998490850</a>
-                        </div>
-                        <div id="insta">
-                            <img src="imagens/Logo/insta.png" width="30px"><a href="https://www.instagram.com/doceslan/" target="_blank">@doceslan</a>
-                        </div>
+    
+        <div id="area-principal">
+                <strong>OBS: </strong>ABA modelo, por favor fazer pedidos no whatsapp ou instagram.
+            <div id="area-produtos">
+                <div class="produto">
+                    <h2>Tortas:</h2><select name="quanttorta1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select> <input type="checkbox"  value="frango com catupiry" name="torta"> Frango com catupiry R$5,00<br>
+                    <select name="quanttorta2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>  <input type="checkbox"  value="calabresa com mussarela" name="torta"> Calabresa com mussarela R$5,00<br>
+                    <select name="quanttorta3">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select> <input type="checkbox"  value="brocolis com mussarela" name="torta"> Brócolis com mussarela R$5,00
+                </div>
+                <div class="produto">
+                    <h2>Bolos:</h2>
+                    1kg = R$50,00<br>
+                    
+                    <select name="quantboloa1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">1,5</option>
+                        <option value="3">2</option>
+                        <option value="4">2,5</option>
+                        <option value="5">3</option>
+                        <option value="6">3,5</option>
+                        <option value="7">4</option>
+                        <option value="8">4,5</option>
+                        <option value="9">5</option>
+                    </select> <input type="checkbox" value="bolo de cenoura" name="bolo"> Bolo de cenoura <br>
+                    <select name="quantbolo2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">1,5</option>
+                        <option value="3">2</option>
+                        <option value="4">2,5</option>
+                        <option value="5">3</option>
+                        <option value="6">3,5</option>
+                        <option value="7">4</option>
+                        <option value="8">4,5</option>
+                        <option value="9">5</option>
+                    </select> <input type="checkbox" value="bolo de prestigio" name="bolo"> Bolo de prestigio <br>
+                </div>
+                <div id="area-total">
+                    <h2>Total</h2>
+                    <div id="endereco">
+                    <input type="radio" name="retirar" value="local"> Retirar no local <br>
+                    <input type="radio" name="retirar" value="enviar"> Entregar  R$2,00<br>
+                    Endereço: <input type="text" name="endereco"> <br>
+                    <input type="button"  value="Pedir">
                     </div>
+                    <div id="Total">
+                        Valor<br>
+                        frete<br>
+                        total
+                    </div>
+                    <div class="clear"></div>
                 </div>
             </div>
-
+            
 
             <div id="area-lateral">
                 <div>
@@ -48,13 +122,13 @@
             </div>
 
 
-        <div id="rodape">
-            <h3>Todos os direitos reservados</h3>
+            
+
+    
+            <div id="rodape">
+                <h3>Todos os direitos reservados</h3>
+            </div>
+    
         </div>
-
-    </div>
-
-
-</body>
-
+    </body>
 </html>
