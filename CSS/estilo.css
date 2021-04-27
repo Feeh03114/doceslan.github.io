@@ -121,6 +121,9 @@ h2{
 #Total h2{
     color: #A3D9CF;
 }
+#btn1 h4{
+    font: bold;
+}
 
 .branco{
     color: white;
@@ -134,4 +137,12 @@ h2{
 }
 #whats, #insta {
     padding: 10px;
+}
+
+#btn1{
+    margin-top: 14px;
+    padding: 5px;
+    text-align: center;
+    background: #A6DDED;
+    border-radius: 14px;
 }
