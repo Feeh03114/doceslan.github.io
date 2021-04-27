@@ -1,3 +1,15 @@
+/*constantes*/
+const radio1 = document.getElementById('rd1');
+const radio2 = document.getElementById('rd2');
+const containertotalproduto = document.getElementById('totalproduto');
+const containertotalfrete = document.getElementById('totalfrete');
+const containertotal = document.getElementById('totalsub');
+let valorbolo = 0
+let valortorta = 0
+let total = 0
+
+
+
 const itenstorta = [
     {
         id:0,
@@ -76,17 +88,13 @@ inicializarloja = () => {
 
 inicializarloja();
 
-var valorbolo = 0
-var valortorta = 0
-var containertotalproduto = document.getElementById('totalproduto');
+;
 atualizarcarrinho = () =>{
-    console.log(itensbolos)
-    console.log(itenstorta)
-    
     let containercarrinho = document.getElementById('carrinho');
     
     containercarrinho.innerHTML = "";
-
+    valortorta = 0
+    valorbolo = 0
         itenstorta.map((val)=>{
             
             if(val.quantidade > 0){
@@ -108,49 +116,113 @@ atualizarcarrinho = () =>{
 
     
     containertotalproduto.innerHTML = "";
+    containertotalfrete.innerHTML = "";
+    containertotal.innerHTML = "";
         
     valorestotais();
 }
 
 
 valorestotais = () => {
-    let total = valorbolo + valortorta
-    let total2 = total.toFixed(2)
-    let totalstring =  total2.replace(".",",")
+    let frete = 0
+    if(radio2.checked == true){ frete = 2}else{frete = 0.00}
+    let totalstring = valorbolo + valortorta
+    total = frete + totalstring
+
+    totalstring = totalstring.toFixed(2)
+    frete = frete.toFixed(2)
+    total = total.toFixed(2)
+
     containertotalproduto.innerHTML +=`
-        R$ `+totalstring+`<br>
+        R$ `+totalstring.replace(".",",")+`<br><br>
     `;
+
+    containertotalproduto.innerHTML +=`
+        R$ `+frete.replace(".",",")+`<br><br>
+    `;
+    containertotalproduto.innerHTML +=`
+       <h2> R$ `+total.replace(".",",")+`</h2>
+    `;
+
+
 }
 
 let links = document.getElementsByClassName("venda");
 for(let i =0;i<links.length;i++){
     links[i].addEventListener("click",function(){
         let key = this.getAttribute('key');
-        if(links[i].id =='torta'){
-            itenstorta[key].quantidade++;
-            atualizarcarrinho();
-            return false;
-        }else if (links[i].id=='bolo'){
-            itensbolos[key].quantidade++;
-            atualizarcarrinho();
-            return false;
+        if((radio1.checked == true) || (radio2.checked == true)){
+            if(links[i].id =='torta'){
+                itenstorta[key].quantidade++;
+                atualizarcarrinho();
+                return false;
+            }else if (links[i].id=='bolo'){
+                itensbolos[key].quantidade++;
+                atualizarcarrinho();
+                return false;
+            }else{
+
+            } 
         }else{
-
-        }  
-    })
-}
-
-var radios = document.getElementById('retirar');
-for(var i =0;i<radios.length;i++){
-    radios[i].addEventListener("click",function(){
-        if(radios[i].checked =='true' ){
-            valorestotais();
+            alert("Por favor selecione se vai retirar ou entregar!!")
         }
     })
 }
 
 
-enviar = () =>{
 
+
+
+enviar = () =>{
+    atualizarcarrinho();
+    let tipopagamento = document.getElementById("typepagamento").value;
+    let lugar = document.getElementById("enderecotext").value;
+    let numero = '5515998490850'
+    let mensagem = ''
+    console.log(lugar)
+    console.log(radio1.checked)
+    if(tipopagamento != ''){
+        if((lugar == undefined) && (radio1.checked == true)){
+            itenstorta.map((val)=>{  
+                if(val.quantidade > 0){
+                    valortorta += (val.preco * val.quantidade)
+                    mensagem += `(`+val.nome+` | `+val.quantidade+` Un )\n`;
+            }})
+        
+            itensbolos.map((val)=>{
+                if(val.quantidade > 0){
+                    quant = (val.quantidade*val.preco).toFixed(2)
+                    mensagem +=` (`+val.nome+` | `+val.quantidade+` KG )\n`; 
+                }})
+            
+            alert(`Retirar na Rua: Ozires Martins de Siqueira, 99`)
+            mensagem += 'Entregar no endereço: Retirada\n'
+            
+            mensagem += 'Valor total: '+total
+            
+            window.open('https://api.whatsapp.com/send?phone='+numero+'&text='+mensagem)
+
+            
+        }else{
+            itenstorta.map((val)=>{  
+                if(val.quantidade > 0){
+                    valortorta += (val.preco * val.quantidade)
+                    mensagem += `(`+val.nome+` | `+val.quantidade+` Un )\n`;
+            }})
+        
+            itensbolos.map((val)=>{
+                if(val.quantidade > 0){
+                    quant = (val.quantidade*val.preco).toFixed(2)
+                    mensagem +=` (`+val.nome+` | `+val.quantidade+` KG )\n`; 
+                }})
+                
+                mensagem += 'Entregar no endereço: '+lugar+'\n'
+                mensagem += 'Valor total: '+total
+
+                window.open('https://api.whatsapp.com/send?phone='+numero+'&text='+mensagem)
+        }
+    }else{
+        alert(`Por favor, selecione o tipo de pagamento!!`)
+    }
 }
 

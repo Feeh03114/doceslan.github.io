@@ -64,7 +64,7 @@ body{
 }
 #Total{
     float: right;
-    width: 100px;
+    width: 110px;
 
 }
 #carinho{
@@ -116,6 +116,9 @@ h2{
 #area-produtos h2{
     color: #f7b600;
     margin-bottom: 5px;
+}
+#Total h2{
+    color: #A3D9CF;
 }
 
 .branco{

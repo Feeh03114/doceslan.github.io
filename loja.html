@@ -43,15 +43,21 @@
                     <h2>Total</h2>
                     <div id="Total">
                         <span id="totalproduto"></span><br>
-                        <span id="totalfrete">frete</span><br>
-                        <h2 id="totalsub">total</h2>
+                        <span id="totalfrete"></span><br>
+                        <h2 id="totalsub"></h2>
                     </div>
                         <div id="carrinho"></div>
                     <div id="endereco">
                         <hr id="carinho">
-                        <input type="radio" id="retirar" name="retirar" value="local"> Retirar no local <br>
-                        <input type="radio" id="retirar" name="retirar" value="enviar"> Entregar  R$2,00<br>
-                        Endereço: <input type="text" name="endereco"> <br>
+                        <input type="radio" id="rd1" name="retirar" value="local"> Retirar no local <br>
+                        <input type="radio" id="rd2" name="retirar" value="enviar"> Entregar  R$2,00<br>
+                        Endereço: <input type="text" id="enderecotext"> 
+                        <select id="typepagamento">
+                            <option value=""></option>
+                            <option value="Cartão">Cartão</option>
+                            <option value="PIX">PIX</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                        </select><br>
                         <button onclick="enviar()" id="btn1">Fazer pedido</button>
                     </div>
 
